@@ -10,6 +10,8 @@ namespace ResponsiPemrograman2742
             Console.WriteLine("NIM      : 19.11.2742");
             Console.WriteLine("Kelas    : 19 IF 03");
 
+            Console.WriteLine("\n");
+
 
             Karyawan karyawan1 = new Karyawan(1911, "Ivan Nur", 3000000);
             Karyawan karyawan2 = new Karyawan(2742, "Ilham Syah", 2000000);
@@ -37,29 +39,4 @@ namespace ResponsiPemrograman2742
         }
     }
 
-    class Karyawan
-    {
-        public int NIK { get; set; }
-        public string Nama { get; set; }
-        public int GajiBulanan { get; set; }
-        public int NaikGaji { get; set; }
-
-        public Karyawan(int nik, string nama, int gajiBulanan)
-        {
-            this.NIK = nik;
-            this.Nama = nama;
-            
-            if(gajiBulanan < 0)
-            {
-                this.GajiBulanan = 0;
-                NaikGaji = Convert.ToInt32((GajiBulanan * 1.1));
-            } else
-            {
-                this.GajiBulanan = gajiBulanan;
-                NaikGaji = Convert.ToInt32((GajiBulanan * 1.1));
-            }
-
-        }
-
-    }
 }
